@@ -32,8 +32,12 @@ export class LoginComponent implements OnInit {
 
       this.getData = res; console.log("flag "+this.getData)
 
-      if(this.getData != 0) {
+      if(this.getData == 1) {
         this.router.navigate(["/home"]);
+        alert("Login efetuado!")
+      }
+      else {
+        alert("E-mail ou senha inválido!")
       }
     })
 
